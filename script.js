@@ -1,5 +1,6 @@
 
-let matix = (16 * 16);
+let matix = (50 * 50);
+
 let height = 16 * 30
 console.log(matix, height)
 
@@ -24,3 +25,13 @@ for (let cell of allCells) {
        this.style.backgroundColor = "grey";
     })
 }
+
+
+let sliderValue = document.getElementById("slider")
+let root = document.documentElement
+
+slider.addEventListener("input", (e) => {
+    root.style.setProperty("--cells-default", "repeat(" + e.target.value + ", 1fr)")
+});
+
+

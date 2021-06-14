@@ -1,22 +1,14 @@
 :root {
-    --main-grid-columns: repeat(16, 30px);
-    --main-grid-rows: repeat(16, 30px);
+    --cells-default: repeat(16, 1fr);
 }
 
 #grid {
     display: grid;
-    grid-template-columns: var(--main-grid-columns);
-    grid-template-rows: var(--main-grid-rows);
+    grid-template-columns: var(--cells-default);
+    grid-template-rows: var(--cells-default);
     background-color: white;
     border: 1px solid black;
     justify-content: center;
-    width: 480px;
-}
-
-.cells {
-    border: 1px solid black;
-}
-
-/* .cells:hover {
-    background-color: black;
-} */
+    width: 600px;
+    height: 600px;
+};
