@@ -1,11 +1,6 @@
 
-let matix = (50 * 50);
-
-let height = 16 * 30
-console.log(matix, height)
-
+let matix = 50 * 50;
 let gridItems = document.getElementById('grid');
-console.log(gridItems)
 
 for (let i = 0; i < matix; i++) {
     let div = document.createElement('div');
@@ -13,25 +8,33 @@ for (let i = 0; i < matix; i++) {
     gridItems.appendChild(div);
 }
 
-
-console.log(document.getElementsByClassName("cells").length)
-// document.documentElement.style.setProperty('--main-grid', '#YOURCOLOR');
-
-
 let allCells = document.querySelectorAll(".cells");
 
-for (let cell of allCells) {
-    cell.addEventListener("mouseenter", function() {
-       this.style.backgroundColor = "grey";
-    })
-}
+(function makeGrey() {
+    for (let cell of allCells) {
+        cell.addEventListener("mouseenter", function() {
+           this.style.backgroundColor = "grey";
+        })
+    }
+})()
 
+function erase() {
+    for (let cell of allCells) {
+        cell.style.backgroundColor = "white";
+    }
+}
 
 let sliderValue = document.getElementById("slider")
 let root = document.documentElement
 
 slider.addEventListener("input", (e) => {
     root.style.setProperty("--cells-default", "repeat(" + e.target.value + ", 1fr)")
+    erase();
 });
+
+let eraseButton = document.querySelector("button")
+eraseButton.addEventListener("click", function() {
+    erase();
+})
 
 

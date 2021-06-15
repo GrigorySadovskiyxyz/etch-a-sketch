@@ -1,5 +1,10 @@
 :root {
-    --cells-default: repeat(16, 1fr);
+    --cells-default: repeat(50, 1fr);
+    --white: white;
+}
+
+h1 {
+    text-align: center;
 }
 
 #grid {
@@ -8,7 +13,8 @@
     grid-template-rows: var(--cells-default);
     background-color: white;
     border: 1px solid black;
-    justify-content: center;
+    margin: 0 auto;
     width: 600px;
     height: 600px;
 };
+

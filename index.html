@@ -8,11 +8,14 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
+    <h1>Etch-A-Sketch</h1>
     <div id="grid"></div>
-    <label for="slider">Dimension:</label>
-    <input type="range" id="slider" min="1" max="50" step="1" value="1"/>
+    <div>
+        <label for="slider">Dimension:</label>
+        <input type="range" id="slider" min="1" max="50" step="1" value="1"/>
+        <output for="slider"></output>
+        <button type="button">Erase</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
-
-<!-- oninput="changeSliderVal(this.value) -->
