@@ -25,7 +25,6 @@ let allCells = document.querySelectorAll(".cells");
     }
 })()
 
-
 let sliderValue = document.getElementById("slider").value;
 let root = document.documentElement
 
