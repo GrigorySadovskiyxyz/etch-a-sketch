@@ -1,5 +1,5 @@
 :root {
-    --cells-default: repeat(50, 1fr);
+    --cells-default: repeat(64, 1fr);
     --white: white;
 }
 
@@ -17,4 +17,3 @@ h1 {
     width: 600px;
     height: 600px;
 };
-
