@@ -35,16 +35,8 @@ slider.addEventListener("input", (e) => {
 });
 
 
-
-
-
-
-
-
 // Erase button.
 // How many squares per side? (Maximum: 64)
-
-
 
 function erase() {
     for (let cell of allCells) {
@@ -70,6 +62,21 @@ function colorize() {
     for (let cell of allCells) {
         cell.addEventListener("mouseenter", function() {
            this.style.backgroundColor = "#" + getRandomColor();
+        })
+    }
+}
+
+// Grey button.
+
+let greyButton = document.getElementById("grey");
+greyButton.addEventListener("click", function() {
+    greyUsage();
+})
+
+function greyUsage() {
+    for (let cell of allCells) {
+        cell.addEventListener("mouseenter", function() {
+           this.style.backgroundColor = "grey"
         })
     }
 }
